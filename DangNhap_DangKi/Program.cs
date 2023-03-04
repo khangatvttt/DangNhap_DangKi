@@ -16,7 +16,7 @@ namespace DangNhap_DangKi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new F_DangKi());
+            Application.Run(new Form3());
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace DangNhap_DangKi
 {
-    partial class Form3
+    partial class F_Admin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Tbc_ad = new System.Windows.Forms.TabControl();
             this.tabP_tracuu = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
-            this.directorySearcher2 = new System.DirectoryServices.DirectorySearcher();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.btnNhapLaiHoTen = new System.Windows.Forms.Button();
+            this.btnNhapLaiCCCD = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.txtSoHoKhau = new System.Windows.Forms.TextBox();
+            this.label = new System.Windows.Forms.Label();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCCCD = new System.Windows.Forms.TextBox();
+            this.dtgTTCongDan = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -67,11 +72,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.directorySearcher2 = new System.DirectoryServices.DirectorySearcher();
             this.Tbc_ad.SuspendLayout();
             this.tabP_tracuu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTTCongDan)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,27 +90,182 @@
             this.Tbc_ad.Location = new System.Drawing.Point(0, 0);
             this.Tbc_ad.Name = "Tbc_ad";
             this.Tbc_ad.SelectedIndex = 0;
-            this.Tbc_ad.Size = new System.Drawing.Size(1404, 595);
+            this.Tbc_ad.Size = new System.Drawing.Size(1199, 544);
             this.Tbc_ad.TabIndex = 0;
             // 
             // tabP_tracuu
             // 
-            this.tabP_tracuu.Controls.Add(this.button2);
-            this.tabP_tracuu.Controls.Add(this.button1);
+            this.tabP_tracuu.Controls.Add(this.btnXoa);
+            this.tabP_tracuu.Controls.Add(this.button6);
+            this.tabP_tracuu.Controls.Add(this.btnNhapLaiHoTen);
+            this.tabP_tracuu.Controls.Add(this.btnNhapLaiCCCD);
+            this.tabP_tracuu.Controls.Add(this.btnSua);
+            this.tabP_tracuu.Controls.Add(this.btnThem);
             this.tabP_tracuu.Controls.Add(this.label3);
-            this.tabP_tracuu.Controls.Add(this.textBox3);
-            this.tabP_tracuu.Controls.Add(this.label2);
-            this.tabP_tracuu.Controls.Add(this.textBox2);
+            this.tabP_tracuu.Controls.Add(this.txtSoHoKhau);
+            this.tabP_tracuu.Controls.Add(this.label);
+            this.tabP_tracuu.Controls.Add(this.txtHoTen);
             this.tabP_tracuu.Controls.Add(this.label1);
-            this.tabP_tracuu.Controls.Add(this.textBox1);
-            this.tabP_tracuu.Controls.Add(this.dataGridView1);
+            this.tabP_tracuu.Controls.Add(this.txtCCCD);
+            this.tabP_tracuu.Controls.Add(this.dtgTTCongDan);
             this.tabP_tracuu.Location = new System.Drawing.Point(4, 29);
             this.tabP_tracuu.Name = "tabP_tracuu";
             this.tabP_tracuu.Padding = new System.Windows.Forms.Padding(3);
-            this.tabP_tracuu.Size = new System.Drawing.Size(1290, 544);
+            this.tabP_tracuu.Size = new System.Drawing.Size(1191, 511);
             this.tabP_tracuu.TabIndex = 0;
             this.tabP_tracuu.Text = "Tra cứu thông tin";
             this.tabP_tracuu.UseVisualStyleBackColor = true;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(170, 384);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(112, 49);
+            this.btnXoa.TabIndex = 12;
+            this.btnXoa.Text = "Xóa dữ liệu";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(314, 280);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 26);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "Nhập lại";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // btnNhapLaiHoTen
+            // 
+            this.btnNhapLaiHoTen.Location = new System.Drawing.Point(314, 177);
+            this.btnNhapLaiHoTen.Name = "btnNhapLaiHoTen";
+            this.btnNhapLaiHoTen.Size = new System.Drawing.Size(75, 26);
+            this.btnNhapLaiHoTen.TabIndex = 10;
+            this.btnNhapLaiHoTen.Text = "Nhập lại";
+            this.btnNhapLaiHoTen.UseVisualStyleBackColor = true;
+            this.btnNhapLaiHoTen.Click += new System.EventHandler(this.btnNhapLaiHoTen_Click);
+            // 
+            // btnNhapLaiCCCD
+            // 
+            this.btnNhapLaiCCCD.Location = new System.Drawing.Point(314, 71);
+            this.btnNhapLaiCCCD.Name = "btnNhapLaiCCCD";
+            this.btnNhapLaiCCCD.Size = new System.Drawing.Size(75, 26);
+            this.btnNhapLaiCCCD.TabIndex = 9;
+            this.btnNhapLaiCCCD.Text = "Nhập lại";
+            this.btnNhapLaiCCCD.UseVisualStyleBackColor = true;
+            this.btnNhapLaiCCCD.Click += new System.EventHandler(this.btnNhapLaiCCCD_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(314, 384);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(116, 49);
+            this.btnSua.TabIndex = 8;
+            this.btnSua.Text = "Sửa dữ liệu";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(19, 384);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(117, 49);
+            this.btnThem.TabIndex = 7;
+            this.btnThem.Text = "Thêm dữ liệu";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(46, 238);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(180, 20);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Tra cứu theo sổ hộ khẩu";
+            // 
+            // txtSoHoKhau
+            // 
+            this.txtSoHoKhau.Location = new System.Drawing.Point(50, 280);
+            this.txtSoHoKhau.Name = "txtSoHoKhau";
+            this.txtSoHoKhau.Size = new System.Drawing.Size(232, 26);
+            this.txtSoHoKhau.TabIndex = 5;
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(46, 143);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(167, 20);
+            this.label.TabIndex = 4;
+            this.label.Text = "Tra cứu theo họ và tên";
+            // 
+            // txtHoTen
+            // 
+            this.txtHoTen.Location = new System.Drawing.Point(50, 177);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(232, 26);
+            this.txtHoTen.TabIndex = 3;
+            this.txtHoTen.TextChanged += new System.EventHandler(this.txtHoTen_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(46, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Tra cứu theo CCCD";
+            // 
+            // txtCCCD
+            // 
+            this.txtCCCD.Location = new System.Drawing.Point(50, 71);
+            this.txtCCCD.Name = "txtCCCD";
+            this.txtCCCD.Size = new System.Drawing.Size(232, 26);
+            this.txtCCCD.TabIndex = 1;
+            this.txtCCCD.TextChanged += new System.EventHandler(this.txtCCCD_TextChanged);
+            // 
+            // dtgTTCongDan
+            // 
+            this.dtgTTCongDan.AllowUserToAddRows = false;
+            this.dtgTTCongDan.AllowUserToDeleteRows = false;
+            this.dtgTTCongDan.AllowUserToResizeColumns = false;
+            this.dtgTTCongDan.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.dtgTTCongDan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgTTCongDan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgTTCongDan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgTTCongDan.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dtgTTCongDan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dtgTTCongDan.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgTTCongDan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dtgTTCongDan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgTTCongDan.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgTTCongDan.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dtgTTCongDan.EnableHeadersVisualStyles = false;
+            this.dtgTTCongDan.Location = new System.Drawing.Point(448, 6);
+            this.dtgTTCongDan.Name = "dtgTTCongDan";
+            this.dtgTTCongDan.ReadOnly = true;
+            this.dtgTTCongDan.RowHeadersWidth = 25;
+            this.dtgTTCongDan.RowTemplate.Height = 28;
+            this.dtgTTCongDan.Size = new System.Drawing.Size(743, 505);
+            this.dtgTTCongDan.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -136,111 +298,19 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1396, 562);
+            this.tabPage2.Size = new System.Drawing.Size(1191, 511);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Thông tin báo lỗi";
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // dataGridView1
+            // button3
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(473, -17);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(831, 565);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // directorySearcher1
-            // 
-            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            // 
-            // directorySearcher2
-            // 
-            this.directorySearcher2.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher2.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher2.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(50, 71);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(267, 26);
-            this.textBox1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Tra cứu theo CCCD";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 143);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Tra cứu theo họ và tên";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(50, 177);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(267, 26);
-            this.textBox2.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 238);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(180, 20);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Tra cứu theo sổ hộ khẩu";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(50, 280);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(267, 26);
-            this.textBox3.TabIndex = 5;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(40, 400);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 49);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Tra cứu";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(292, 400);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 49);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Nhập lại";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 62;
-            this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(1390, 225);
-            this.dataGridView2.TabIndex = 0;
+            this.button3.Location = new System.Drawing.Point(1289, 332);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(99, 33);
+            this.button3.TabIndex = 51;
+            this.button3.Text = "Cập nhật";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
@@ -435,29 +505,45 @@
             this.label15.TabIndex = 27;
             this.label15.Text = "Họ và Tên";
             // 
-            // button3
+            // dataGridView2
             // 
-            this.button3.Location = new System.Drawing.Point(1289, 332);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 33);
-            this.button3.TabIndex = 51;
-            this.button3.Text = "Cập nhật";
-            this.button3.UseVisualStyleBackColor = true;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 62;
+            this.dataGridView2.RowTemplate.Height = 28;
+            this.dataGridView2.Size = new System.Drawing.Size(1185, 225);
+            this.dataGridView2.TabIndex = 0;
             // 
-            // Form3
+            // directorySearcher1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1404, 595);
+            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            // 
+            // directorySearcher2
+            // 
+            this.directorySearcher2.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher2.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher2.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            // 
+            // F_Admin
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1199, 544);
             this.Controls.Add(this.Tbc_ad);
-            this.Name = "Form3";
+            this.Name = "F_Admin";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
+            this.Load += new System.EventHandler(this.F_Admin_Load);
             this.Tbc_ad.ResumeLayout(false);
             this.tabP_tracuu.ResumeLayout(false);
             this.tabP_tracuu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTTCongDan)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
@@ -467,18 +553,18 @@
 
         private System.Windows.Forms.TabControl Tbc_ad;
         private System.Windows.Forms.TabPage tabP_tracuu;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgTTCongDan;
         private System.Windows.Forms.TabPage tabPage2;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.DirectoryServices.DirectorySearcher directorySearcher2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSoHoKhau;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtCCCD;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label14;
@@ -505,5 +591,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnNhapLaiHoTen;
+        private System.Windows.Forms.Button btnNhapLaiCCCD;
     }
 }

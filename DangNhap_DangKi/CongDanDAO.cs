@@ -23,14 +23,14 @@ namespace DangNhap_DangKi
               "(N'{0}','{1}',N'{2}',N'{3}',N'{4}',N'{5}',N'{6}',N'{7}',N'{8}',N'{9}')",
               congdan.HoTen,congdan.NgaySinh.ToString("yyyy/MM/dd"),congdan.DiaChiThuongTru,congdan.DiaChiHienTai,
               congdan.CCCD,congdan.DanToc,congdan.TonGiao,congdan.GioiTinh,congdan.NgheNghiep,congdan.TrinhDoHocVan);
-            this.ThucThi(SQL);
+            this.ThucThi(SQL,true);
         }
         public void XoaDuLieu(string CCCD)
         {
             string SQL = string.Format("use QLCD delete from CongDan where CCCD='{0}'",CCCD);
-            this.ThucThi(SQL);
+            this.ThucThi(SQL,true);
         }
-        public void ThucThi(string sql)
+        public void ThucThi(string sql, bool ShowMessege)
         {
             try
             {
@@ -38,7 +38,8 @@ namespace DangNhap_DangKi
                 string sqlStr = sql;
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("Lệnh đã thực hiện thành công!","Thành công");
+                    if (ShowMessege)
+                        MessageBox.Show("Lệnh đã thực hiện thành công!","Thành công");
             }
             catch (Exception ex)
             {
@@ -78,7 +79,7 @@ namespace DangNhap_DangKi
                                     "GioiTinh=N'{7}',NgheNghiep=N'{8}',TrinhDoHocVan=N'{9}' where CCCD='{10}'"
                                     ,congdan.HoTen,congdan.NgaySinh.ToString("yyyy/MM/dd"),congdan.DiaChiThuongTru,congdan.DiaChiHienTai
                                     , congdan.CCCD,congdan.DanToc,congdan.TonGiao,congdan.GioiTinh,congdan.NgheNghiep,congdan.TrinhDoHocVan,CCCD);
-            this.ThucThi(SQL);
+            this.ThucThi(SQL, true);
         }
 
         public DataTable TraCuuTheoHoTen(string HoTen)
@@ -125,6 +126,33 @@ namespace DangNhap_DangKi
             {
                 //Không trùng
                 return true;
+            }
+        }
+        public DataTable LayThue(string CCCD)
+        {
+            string sqlStr = "use QLCD select LoaiThue,SoTien,NgayDenHan,TinhTrang,TienQuaHan,Tong from Thue where CCCD='" + CCCD + "'";
+            return TraCuu(sqlStr);
+        }
+        public DataTable LayThueChuaDong(string CCCD)
+        {
+            string sqlStr = "use QLCD select LoaiThue,SoTien,NgayDenHan,TinhTrang,TienQuaHan,Tong from Thue" +
+                                " where CCCD='" + CCCD + "' and TinhTrang=N'Chưa đóng'";
+            return TraCuu(sqlStr);
+        }
+        public void TinhThueQuaHan()
+        {
+            string sqlStr = "use QLCD update Thue set QuaHan=1 where NgayDenHan<'2023-4-28' and TinhTrang=N'Chưa đóng'" +
+                " update Thue set TienQuaHan = SoTien*0.1 where QuaHan=1" +
+                " update Thue set TienQuaHan = 0 where QuaHan is NULL" +
+                " update Thue set Tong = SoTien+TienQuaHan";
+            ThucThi(sqlStr,false);
+        }
+        public void DongThue(string[] ThueChon)
+        {
+            foreach (string LoaiThue in ThueChon)
+            {
+                string sqlStr = "use QLCD update Thue set TinhTrang=N'Đã đóng' where LoaiThue=N'"+LoaiThue+"'";
+                ThucThi(sqlStr, false);
             }
         }
     }

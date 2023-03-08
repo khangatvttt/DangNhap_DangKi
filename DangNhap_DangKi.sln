@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DangNhap_DangKi", "DangNhap_DangKi\DangNhap_DangKi.csproj", "{39231C06-42C4-4468-80C4-4726B87604C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoAnWinform", "DangNhap_DangKi\DoAnWinform.csproj", "{39231C06-42C4-4468-80C4-4726B87604C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
